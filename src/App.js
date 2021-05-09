@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'
+import Routes from './Routes';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Amplify, { API } from 'aws-amplify'
+import awsmobile from './aws-exports';
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+Amplify.configure(awsmobile);
+API.configure();
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div style={styles.appContainer}>
+        <Header />
+        <main className="mainContent" style={styles.postHeader}>
+        <Routes />
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  )
+}
+
+const styles = {
+  appContainer: {
+    paddingTop: 0,
+  },
+  postHeader: {
+    marginTop: '5.5rem'
+  },
 }
 
 export default App;

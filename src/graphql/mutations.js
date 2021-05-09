@@ -1,19 +1,53 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createBlog = /* GraphQL */ `
-  mutation CreateBlog(
-    $input: CreateBlogInput!
-    $condition: ModelBlogConditionInput
+export const createResume = /* GraphQL */ `
+  mutation CreateResume(
+    $input: CreateResumeInput!
+    $condition: ModelResumeConditionInput
   ) {
-    createBlog(input: $input, condition: $condition) {
+    createResume(input: $input, condition: $condition) {
       id
-      name
-      posts {
+      type
+      email
+      location
+      jobTitle
+      overview
+      experience {
+        items {
+          id
+          company
+          startDate
+          endDate
+          location
+          overview
+          bullets
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      education {
+        items {
+          id
+          school
+          degree
+          startDate
+          endDate
+          location
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      skills {
         items {
           id
           title
-          blogID
+          type
+          ResumeID
           createdAt
           updatedAt
         }
@@ -24,19 +58,53 @@ export const createBlog = /* GraphQL */ `
     }
   }
 `;
-export const updateBlog = /* GraphQL */ `
-  mutation UpdateBlog(
-    $input: UpdateBlogInput!
-    $condition: ModelBlogConditionInput
+export const updateResume = /* GraphQL */ `
+  mutation UpdateResume(
+    $input: UpdateResumeInput!
+    $condition: ModelResumeConditionInput
   ) {
-    updateBlog(input: $input, condition: $condition) {
+    updateResume(input: $input, condition: $condition) {
       id
-      name
-      posts {
+      type
+      email
+      location
+      jobTitle
+      overview
+      experience {
+        items {
+          id
+          company
+          startDate
+          endDate
+          location
+          overview
+          bullets
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      education {
+        items {
+          id
+          school
+          degree
+          startDate
+          endDate
+          location
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      skills {
         items {
           id
           title
-          blogID
+          type
+          ResumeID
           createdAt
           updatedAt
         }
@@ -47,19 +115,53 @@ export const updateBlog = /* GraphQL */ `
     }
   }
 `;
-export const deleteBlog = /* GraphQL */ `
-  mutation DeleteBlog(
-    $input: DeleteBlogInput!
-    $condition: ModelBlogConditionInput
+export const deleteResume = /* GraphQL */ `
+  mutation DeleteResume(
+    $input: DeleteResumeInput!
+    $condition: ModelResumeConditionInput
   ) {
-    deleteBlog(input: $input, condition: $condition) {
+    deleteResume(input: $input, condition: $condition) {
       id
-      name
-      posts {
+      type
+      email
+      location
+      jobTitle
+      overview
+      experience {
+        items {
+          id
+          company
+          startDate
+          endDate
+          location
+          overview
+          bullets
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      education {
+        items {
+          id
+          school
+          degree
+          startDate
+          endDate
+          location
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      skills {
         items {
           id
           title
-          blogID
+          type
+          ResumeID
           createdAt
           updatedAt
         }
@@ -70,190 +172,157 @@ export const deleteBlog = /* GraphQL */ `
     }
   }
 `;
-export const createPost = /* GraphQL */ `
-  mutation CreatePost(
-    $input: CreatePostInput!
-    $condition: ModelPostConditionInput
+export const createExperience = /* GraphQL */ `
+  mutation CreateExperience(
+    $input: CreateExperienceInput!
+    $condition: ModelExperienceConditionInput
   ) {
-    createPost(input: $input, condition: $condition) {
+    createExperience(input: $input, condition: $condition) {
+      id
+      company
+      startDate
+      endDate
+      location
+      overview
+      bullets
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateExperience = /* GraphQL */ `
+  mutation UpdateExperience(
+    $input: UpdateExperienceInput!
+    $condition: ModelExperienceConditionInput
+  ) {
+    updateExperience(input: $input, condition: $condition) {
+      id
+      company
+      startDate
+      endDate
+      location
+      overview
+      bullets
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteExperience = /* GraphQL */ `
+  mutation DeleteExperience(
+    $input: DeleteExperienceInput!
+    $condition: ModelExperienceConditionInput
+  ) {
+    deleteExperience(input: $input, condition: $condition) {
+      id
+      company
+      startDate
+      endDate
+      location
+      overview
+      bullets
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createEducation = /* GraphQL */ `
+  mutation CreateEducation(
+    $input: CreateEducationInput!
+    $condition: ModelEducationConditionInput
+  ) {
+    createEducation(input: $input, condition: $condition) {
+      id
+      school
+      degree
+      startDate
+      endDate
+      location
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateEducation = /* GraphQL */ `
+  mutation UpdateEducation(
+    $input: UpdateEducationInput!
+    $condition: ModelEducationConditionInput
+  ) {
+    updateEducation(input: $input, condition: $condition) {
+      id
+      school
+      degree
+      startDate
+      endDate
+      location
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteEducation = /* GraphQL */ `
+  mutation DeleteEducation(
+    $input: DeleteEducationInput!
+    $condition: ModelEducationConditionInput
+  ) {
+    deleteEducation(input: $input, condition: $condition) {
+      id
+      school
+      degree
+      startDate
+      endDate
+      location
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createSkill = /* GraphQL */ `
+  mutation CreateSkill(
+    $input: CreateSkillInput!
+    $condition: ModelSkillConditionInput
+  ) {
+    createSkill(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          postID
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      type
+      ResumeID
       createdAt
       updatedAt
     }
   }
 `;
-export const updatePost = /* GraphQL */ `
-  mutation UpdatePost(
-    $input: UpdatePostInput!
-    $condition: ModelPostConditionInput
+export const updateSkill = /* GraphQL */ `
+  mutation UpdateSkill(
+    $input: UpdateSkillInput!
+    $condition: ModelSkillConditionInput
   ) {
-    updatePost(input: $input, condition: $condition) {
+    updateSkill(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          postID
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      type
+      ResumeID
       createdAt
       updatedAt
     }
   }
 `;
-export const deletePost = /* GraphQL */ `
-  mutation DeletePost(
-    $input: DeletePostInput!
-    $condition: ModelPostConditionInput
+export const deleteSkill = /* GraphQL */ `
+  mutation DeleteSkill(
+    $input: DeleteSkillInput!
+    $condition: ModelSkillConditionInput
   ) {
-    deletePost(input: $input, condition: $condition) {
+    deleteSkill(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          postID
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const createComment = /* GraphQL */ `
-  mutation CreateComment(
-    $input: CreateCommentInput!
-    $condition: ModelCommentConditionInput
-  ) {
-    createComment(input: $input, condition: $condition) {
-      id
-      postID
-      post {
-        id
-        title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      content
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateComment = /* GraphQL */ `
-  mutation UpdateComment(
-    $input: UpdateCommentInput!
-    $condition: ModelCommentConditionInput
-  ) {
-    updateComment(input: $input, condition: $condition) {
-      id
-      postID
-      post {
-        id
-        title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      content
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteComment = /* GraphQL */ `
-  mutation DeleteComment(
-    $input: DeleteCommentInput!
-    $condition: ModelCommentConditionInput
-  ) {
-    deleteComment(input: $input, condition: $condition) {
-      id
-      postID
-      post {
-        id
-        title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      content
+      type
+      ResumeID
       createdAt
       updatedAt
     }

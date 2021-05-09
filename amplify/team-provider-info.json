@@ -10,6 +10,11 @@
       "StackName": "amplify-resume-dev-182939",
       "StackId": "arn:aws:cloudformation:us-east-1:820626187184:stack/amplify-resume-dev-182939/44a62520-b055-11eb-af68-0e229acdb0d3",
       "AmplifyAppId": "d2zcu25ufzebeq"
+    },
+    "categories": {
+      "auth": {
+        "resumefedc3d9e": {}
+      }
     }
   }
 }

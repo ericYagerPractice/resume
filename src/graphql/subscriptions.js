@@ -1,16 +1,50 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateBlog = /* GraphQL */ `
-  subscription OnCreateBlog {
-    onCreateBlog {
+export const onCreateResume = /* GraphQL */ `
+  subscription OnCreateResume {
+    onCreateResume {
       id
-      name
-      posts {
+      type
+      email
+      location
+      jobTitle
+      overview
+      experience {
+        items {
+          id
+          company
+          startDate
+          endDate
+          location
+          overview
+          bullets
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      education {
+        items {
+          id
+          school
+          degree
+          startDate
+          endDate
+          location
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      skills {
         items {
           id
           title
-          blogID
+          type
+          ResumeID
           createdAt
           updatedAt
         }
@@ -21,16 +55,50 @@ export const onCreateBlog = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateBlog = /* GraphQL */ `
-  subscription OnUpdateBlog {
-    onUpdateBlog {
+export const onUpdateResume = /* GraphQL */ `
+  subscription OnUpdateResume {
+    onUpdateResume {
       id
-      name
-      posts {
+      type
+      email
+      location
+      jobTitle
+      overview
+      experience {
+        items {
+          id
+          company
+          startDate
+          endDate
+          location
+          overview
+          bullets
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      education {
+        items {
+          id
+          school
+          degree
+          startDate
+          endDate
+          location
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      skills {
         items {
           id
           title
-          blogID
+          type
+          ResumeID
           createdAt
           updatedAt
         }
@@ -41,16 +109,50 @@ export const onUpdateBlog = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteBlog = /* GraphQL */ `
-  subscription OnDeleteBlog {
-    onDeleteBlog {
+export const onDeleteResume = /* GraphQL */ `
+  subscription OnDeleteResume {
+    onDeleteResume {
       id
-      name
-      posts {
+      type
+      email
+      location
+      jobTitle
+      overview
+      experience {
+        items {
+          id
+          company
+          startDate
+          endDate
+          location
+          overview
+          bullets
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      education {
+        items {
+          id
+          school
+          degree
+          startDate
+          endDate
+          location
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      skills {
         items {
           id
           title
-          blogID
+          type
+          ResumeID
           createdAt
           updatedAt
         }
@@ -61,172 +163,130 @@ export const onDeleteBlog = /* GraphQL */ `
     }
   }
 `;
-export const onCreatePost = /* GraphQL */ `
-  subscription OnCreatePost {
-    onCreatePost {
+export const onCreateExperience = /* GraphQL */ `
+  subscription OnCreateExperience {
+    onCreateExperience {
+      id
+      company
+      startDate
+      endDate
+      location
+      overview
+      bullets
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateExperience = /* GraphQL */ `
+  subscription OnUpdateExperience {
+    onUpdateExperience {
+      id
+      company
+      startDate
+      endDate
+      location
+      overview
+      bullets
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteExperience = /* GraphQL */ `
+  subscription OnDeleteExperience {
+    onDeleteExperience {
+      id
+      company
+      startDate
+      endDate
+      location
+      overview
+      bullets
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateEducation = /* GraphQL */ `
+  subscription OnCreateEducation {
+    onCreateEducation {
+      id
+      school
+      degree
+      startDate
+      endDate
+      location
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateEducation = /* GraphQL */ `
+  subscription OnUpdateEducation {
+    onUpdateEducation {
+      id
+      school
+      degree
+      startDate
+      endDate
+      location
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteEducation = /* GraphQL */ `
+  subscription OnDeleteEducation {
+    onDeleteEducation {
+      id
+      school
+      degree
+      startDate
+      endDate
+      location
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateSkill = /* GraphQL */ `
+  subscription OnCreateSkill {
+    onCreateSkill {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          postID
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      type
+      ResumeID
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdatePost = /* GraphQL */ `
-  subscription OnUpdatePost {
-    onUpdatePost {
+export const onUpdateSkill = /* GraphQL */ `
+  subscription OnUpdateSkill {
+    onUpdateSkill {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          postID
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      type
+      ResumeID
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeletePost = /* GraphQL */ `
-  subscription OnDeletePost {
-    onDeletePost {
+export const onDeleteSkill = /* GraphQL */ `
+  subscription OnDeleteSkill {
+    onDeleteSkill {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          postID
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onCreateComment = /* GraphQL */ `
-  subscription OnCreateComment {
-    onCreateComment {
-      id
-      postID
-      post {
-        id
-        title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      content
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onUpdateComment = /* GraphQL */ `
-  subscription OnUpdateComment {
-    onUpdateComment {
-      id
-      postID
-      post {
-        id
-        title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      content
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onDeleteComment = /* GraphQL */ `
-  subscription OnDeleteComment {
-    onDeleteComment {
-      id
-      postID
-      post {
-        id
-        title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      content
+      type
+      ResumeID
       createdAt
       updatedAt
     }

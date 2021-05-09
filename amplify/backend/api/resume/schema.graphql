@@ -1,20 +1,46 @@
-type Blog @model {
+type Resume @model {
   id: ID!
-  name: String!
-  posts: [Post] @connection(keyName: "byBlog", fields: ["id"])
+  type: String!
+  email: String!
+  location: String!
+  jobTitle: String!
+  overview: String!
+  experience: [Experience] @connection(keyName: "experienceByResume", fields: ["id"])
+  education: [Education] @connection(keyName: "educationByResume", fields: ["id"])
+  skills: [Skill] @connection(keyName: "skillsByResume", fields: ["id"])
 }
 
-type Post @model @key(name: "byBlog", fields: ["blogID"]) {
+type Experience @model @key(name: "experienceByResume", fields: ["ResumeID"]) {
+  id: ID!
+  company: String!
+  startDate: AWSDateTime!
+  endDate: AWSDateTime!
+  location: String!
+  overview: String!
+  bullets: [String]!
+  ResumeID: ID!
+}
+
+type Education @model @key(name: "educationByResume", fields: ["ResumeID"]) {
+  id: ID!
+  school: String!
+  degree: String!
+  startDate: AWSDateTime!
+  endDate: AWSDateTime!
+  location: String!
+  ResumeID: ID!
+}
+
+type Skill @model @key(name: "skillsByResume", fields: ["ResumeID"]) {
   id: ID!
   title: String!
-  blogID: ID!
-  blog: Blog @connection(fields: ["blogID"])
-  comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
+  type: SkillType!
+  ResumeID: ID!
 }
 
-type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
-  id: ID!
-  postID: ID!
-  post: Post @connection(fields: ["postID"])
-  content: String!
-}
+enum SkillType {
+     language
+     databaseTechnology
+     cloudTechnology
+     projectManagementSkill
+ }

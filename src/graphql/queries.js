@@ -1,16 +1,50 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getBlog = /* GraphQL */ `
-  query GetBlog($id: ID!) {
-    getBlog(id: $id) {
+export const getResume = /* GraphQL */ `
+  query GetResume($id: ID!) {
+    getResume(id: $id) {
       id
-      name
-      posts {
+      type
+      email
+      location
+      jobTitle
+      overview
+      experience {
+        items {
+          id
+          company
+          startDate
+          endDate
+          location
+          overview
+          bullets
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      education {
+        items {
+          id
+          school
+          degree
+          startDate
+          endDate
+          location
+          ResumeID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      skills {
         items {
           id
           title
-          blogID
+          type
+          ResumeID
           createdAt
           updatedAt
         }
@@ -21,17 +55,27 @@ export const getBlog = /* GraphQL */ `
     }
   }
 `;
-export const listBlogs = /* GraphQL */ `
-  query ListBlogs(
-    $filter: ModelBlogFilterInput
+export const listResumes = /* GraphQL */ `
+  query ListResumes(
+    $filter: ModelResumeFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listResumes(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
-        posts {
+        type
+        email
+        location
+        jobTitle
+        overview
+        experience {
+          nextToken
+        }
+        education {
+          nextToken
+        }
+        skills {
           nextToken
         }
         createdAt
@@ -41,108 +85,106 @@ export const listBlogs = /* GraphQL */ `
     }
   }
 `;
-export const getPost = /* GraphQL */ `
-  query GetPost($id: ID!) {
-    getPost(id: $id) {
+export const getExperience = /* GraphQL */ `
+  query GetExperience($id: ID!) {
+    getExperience(id: $id) {
+      id
+      company
+      startDate
+      endDate
+      location
+      overview
+      bullets
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listExperiences = /* GraphQL */ `
+  query ListExperiences(
+    $filter: ModelExperienceFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listExperiences(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        company
+        startDate
+        endDate
+        location
+        overview
+        bullets
+        ResumeID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getEducation = /* GraphQL */ `
+  query GetEducation($id: ID!) {
+    getEducation(id: $id) {
+      id
+      school
+      degree
+      startDate
+      endDate
+      location
+      ResumeID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listEducations = /* GraphQL */ `
+  query ListEducations(
+    $filter: ModelEducationFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listEducations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        school
+        degree
+        startDate
+        endDate
+        location
+        ResumeID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getSkill = /* GraphQL */ `
+  query GetSkill($id: ID!) {
+    getSkill(id: $id) {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      comments {
-        items {
-          id
-          postID
-          content
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      type
+      ResumeID
       createdAt
       updatedAt
     }
   }
 `;
-export const listPosts = /* GraphQL */ `
-  query ListPosts(
-    $filter: ModelPostFilterInput
+export const listSkills = /* GraphQL */ `
+  query ListSkills(
+    $filter: ModelSkillFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listSkills(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
-export const getComment = /* GraphQL */ `
-  query GetComment($id: ID!) {
-    getComment(id: $id) {
-      id
-      postID
-      post {
-        id
-        title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      content
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listComments = /* GraphQL */ `
-  query ListComments(
-    $filter: ModelCommentFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        postID
-        post {
-          id
-          title
-          blogID
-          createdAt
-          updatedAt
-        }
-        content
+        type
+        ResumeID
         createdAt
         updatedAt
       }
