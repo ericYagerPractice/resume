@@ -11,11 +11,10 @@ Amplify.configure(awsmobile);
 API.configure();
 
 function App() {
-
   return (
     <Router>
       <div style={styles.appContainer}>
-        <Header />
+      <Header />
         <main className="mainContent" style={styles.postHeader}>
         <Routes />
         </main>

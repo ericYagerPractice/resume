@@ -1,8 +1,6 @@
 import React, { Component } from "react";
+import {MDBCol} from 'mdbreact'
 import '../App.css'
-import { Auth } from 'aws-amplify'
-import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBBtn,MDBIcon,MDBCol } from "mdbreact";
-import { GoBook,GoShield } from "react-icons/go";
 
 /*
 export class AccountButton extends Component{ 
@@ -41,8 +39,7 @@ export class AccountButton extends Component{
 
 */
 
-export class SocialButtons extends Component{
-  render(){
+export function SocialButtons() {
     return(
       <MDBCol className="text-left">
           <ul className="list-unstyled list-inline">  
@@ -64,5 +61,4 @@ export class SocialButtons extends Component{
           </ul> 
       </MDBCol>
     )
-  }
 }

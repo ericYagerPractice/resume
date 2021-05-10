@@ -1,8 +1,6 @@
 import React from 'react';
 
-import {
-  
-} from 'mdbreact';
+//import {} from 'mdbreact';
 import '../static/css/Home.css';
 
 //this is home
@@ -10,7 +8,7 @@ export default function Home() {
   
     return (
       <>
-        This
+        <p>This</p>
 
       </>
     );
