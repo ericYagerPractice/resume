@@ -4,7 +4,27 @@ import { Auth } from 'aws-amplify'
 or push a console error. */
 
 async function checkUser(dispatch) {
-    return
-}
+    try {
+      const user = await Auth.currentAuthenticatedUser()
+      dispatch({ type: 'setUser', user })
+    } catch (err) {
+      if(err != "The user is not authenticated"){
+        console.log('err: ', err)
+      }
+      dispatch({ type: 'loaded' })
+    }
+  }
 
+  function reducer (state, action) {
+    switch(action.type) {
+      case 'setUser':
+        return { ...state, user: action.user, loading: false }
+      case 'loaded':
+        return { ...state, loading: false }
+      default:
+        return state
+    }
+  }
+  
 export default checkUser;
+export {reducer};

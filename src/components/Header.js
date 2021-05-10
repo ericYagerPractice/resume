@@ -23,11 +23,11 @@ import {
                 <nav class="nav nav-pills flex-column flex-sm-row">
                     <a className={currentWindow=="" ? activeClass : inactiveClass} href="/">Home</a>
                     <a className={currentWindow=="Resume" ? activeClass : inactiveClass} href="/Resume">Resume</a>
-                    <a className={currentWindow=="Statistics" ? activeClass : inactiveClass} href="#">Statistics</a>
+                    <a className={currentWindow=="HLD" ? activeClass : inactiveClass} href="/HLD">HLD</a>
                 </nav>
             </MDBNavbarNav>
             <MDBNavbarNav right>
-                <a href="https://github.com/ericYagerPractice/resume" target="_blank" className="btn btn-sm btn-dark btn-rounded">Check out repo &nbsp;<MDBIcon size="1x" className="text-light" icon="code-branch" /></a>
+                <a href="https://github.com/ericYagerPractice/resume" target="_blank" className="btn btn-sm btn-dark btn-rounded">Go to repo &nbsp;<MDBIcon size="1x" className="text-light" icon="code-branch" /></a>
                 
             </MDBNavbarNav>
         </MDBNavbar>

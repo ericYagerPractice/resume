@@ -8,7 +8,7 @@ export default function Home() {
   
     return (
       <>
-        <p>This</p>
+        <p>This is home</p>
 
       </>
     );
