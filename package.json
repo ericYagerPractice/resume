@@ -12,6 +12,7 @@
     "aws-amplify": "^3.4.0",
     "aws-sdk": "^2.849.0",
     "mdb-react-ui-kit": "^1.0.0-alpha3",
+    "mdb-ui-kit": "^3.5.1",
     "mdbreact": "git+https://oauth2:YEdrGzFTSpc3scmUHp3z@git.mdbootstrap.com/mdb/react/re-pro.git",
     "react": "^17.0.1",
     "react-animations": "^1.0.0",

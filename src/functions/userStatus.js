@@ -8,7 +8,7 @@ async function checkUser(dispatch) {
       const user = await Auth.currentAuthenticatedUser()
       dispatch({ type: 'setUser', user })
     } catch (err) {
-      if(err != "The user is not authenticated"){
+      if(err !== "The user is not authenticated"){
         console.log('err: ', err)
       }
       dispatch({ type: 'loaded' })
